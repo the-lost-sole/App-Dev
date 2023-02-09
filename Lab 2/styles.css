@@ -1,0 +1,47 @@
+body{
+    font-size: 1.5em;
+    color: red;
+}
+
+/* a:link {
+    text-decoration: none ;
+} */
+
+.list{
+    margin-left: 3em;
+}
+
+.shop{
+    position: auto;
+}
+
+.pic{
+    height: 100%;
+    width: 100%;
+    /* background-position: 50% 0; */
+}
+
+.fixed-bg{
+    background-image: url("img_tree.gif");
+    min-height: 500px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+h1{
+    color: blue;
+    padding: 0.8em;
+    border-style: dotted;
+    margin: 0.8em;
+}
+
+a{
+    color: blue;
+    text-decoration: none;
+}
+
+a:hover{
+    color: yellow;
+}
