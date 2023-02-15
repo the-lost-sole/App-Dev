@@ -1,0 +1,44 @@
+.Thick_Groove{
+    border-style: groove;
+    width:100%;
+    height:300px;
+    border:5px solid;
+    background-color:#FFFFFF;
+    margin: 10px;
+}
+
+.Medium_Groove{
+    border-style: groove;
+    width:100%;
+    height:300px;
+    border:3px solid;
+    background-color:#FFFFFF;
+    margin: 10px;
+}
+
+.Thin_Groove{
+    border-style: groove;
+    width:100%;
+    height:300px;
+    border:1px solid;
+    background-color:#FFFFFF;
+    margin: 10px;
+}
+
+.Thin_Red_Inset{
+    border-style: inset;
+    border-color: red;
+    border-width: 3px;
+    width:100%;
+    height:300px;
+    margin: 10px;
+}
+
+.Medium_Blue_Outset{
+    border-style: outset;
+    border-color: blue;
+    border-width: 5px;
+    width:100%;
+    height:300px;
+    margin: 10px;
+}

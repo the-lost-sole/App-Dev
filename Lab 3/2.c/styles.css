@@ -1,0 +1,21 @@
+
+body{
+    font-size: 12px;
+
+}
+
+h1{
+    font-size: 1.2em;
+    padding: 1em;
+    background-color: pink;
+    border: 1px black solid;
+    
+}
+
+p{
+    font-size: 0.9em;
+    padding: 1em;
+    color: aliceblue;
+    background-color: grey;
+    border: 1px black solid;
+}

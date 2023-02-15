@@ -1,0 +1,36 @@
+.tab-menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    border-bottom: 1px solid #ccc;
+    display: flex;
+  }
+  
+  .tab-menu li {
+    border: 1px solid #ccc;
+    border-bottom: none;
+    width: 100px;
+    text-align: center;
+    margin-right: 10px;
+  }
+  
+  .tab-menu li:last-child {
+    margin-right: 0;
+  }
+  
+  .tab-menu a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: #333;
+  }
+  
+  .tab-menu li:hover {
+    background-color: #eaf6f6;
+  }
+  
+  .tab-menu .active {
+    background-color: #fff;
+    border-bottom-color: #fff;
+  }
+  
