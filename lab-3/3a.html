@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let r=prompt("enter the sphere radius");
+        function sphere_vol(){
+            let y=(4/3)*3.14*r*r*r;
+            document.write("volume of sphere is "+y);
+        }
+        sphere_vol();
+    </script>
+    <form>
+        <input  type="text" id="rad" placeholder="enter radius">
+        <button onclick="fun1()">calculate area of circle</button>
+        <h3 id="dis"></h3>
+    </form>
+    <script>
+        function fun1(){
+            let y=document.getElementById("rad").value;
+            var z=3.14*y*y;
+            document.write("area of circle is "+z);
+        }
+    </script>
+</body>
+</html>

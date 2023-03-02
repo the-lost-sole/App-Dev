@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Current Time and Message Example</title>
+  </head>
+  <body>
+    <h1 id="message"></h1>
+    <p id="time"></p>
+
+    <script>
+      const currentHour = new Date().getHours();
+
+      let message;
+      if (currentHour >= 5 && currentHour < 12) {
+        message = "Good Morning";
+      } else if (currentHour >= 12 && currentHour < 18) {
+        message = "Good Afternoon";
+      } else if (currentHour >= 18 && currentHour < 22) {
+        message = "Good Evening";
+      } else {
+        message = "Good Night";
+      }
+      
+      const currentTime = new Date().toLocaleTimeString();
+      document.getElementById("message").textContent = message + "!";
+      document.getElementById("time").textContent = "The current time is " + currentTime + ".";
+    </script>
+  </body>
+</html>

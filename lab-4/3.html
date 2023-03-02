@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Three-Letter Words Example</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        font-size: 16px;
+      }
+      label {
+        display: block;
+        margin-bottom: 5px;
+      }
+      input[type="text"] {
+        font-size: 16px;
+        padding: 5px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        margin-bottom: 10px;
+      }
+      button {
+        font-size: 16px;
+        padding: 5px 10px;
+        border: none;
+        border-radius: 5px;
+        background-color: #0077cc;
+        color: #fff;
+        cursor: pointer;
+      }
+      button:hover {
+        background-color: #005fa3;
+      }
+      #output {
+        margin-top: 10px;
+        display: none;
+      }
+      #output h2 {
+        margin-bottom: 5px;
+      }
+      #output p {
+        margin-top: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <form id="form">
+      <label for="word">Enter a five-letter word:</label>
+      <input type="text" id="word" name="word" maxlength="5" required>
+      <button type="submit">Produce Three-Letter Words</button>
+    </form>
+
+    <div id="output">
+      <h2>Produced Three-Letter Words</h2>
+      <p id="words"></p>
+    </div>
+
+    <script>
+      const form = document.getElementById("form");
+      const output = document.getElementById("output");
+      const wordsOutput = document.getElementById("words");
+
+      form.addEventListener("submit", (event) => {
+        event.preventDefault();
+
+        // Get the word entered by the user
+        const word = document.getElementById("word").value.trim().toLowerCase();
+
+        // Check if the word is valid
+        if (word.length !== 5) {
+          alert("The word should be exactly five letters long!");
+        } else {
+          // Produce all possible three-letter words from the letters of the word
+          const threeLetterWords = [];
+          for (let i = 0; i < word.length - 2; i++) {
+            for (let j = i + 1; j < word.length - 1; j++) {
+              for (let k = j + 1; k < word.length; k++) {
+                const threeLetterWord = word[i] + word[j] + word[k];
+                threeLetterWords.push(threeLetterWord);
+              }
+            }
+          }
+
+          // Display the produced three-letter words
+          wordsOutput.textContent = threeLetterWords.join(", ");
+          output.style.display = "block";
+        }
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Merge Sort Example</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        font-size: 16px;
+      }
+      label {
+        display: block;
+        margin-bottom: 5px;
+      }
+      input[type="text"] {
+        font-size: 16px;
+        padding: 5px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        margin-bottom: 10px;
+      }
+      button {
+        font-size: 16px;
+        padding: 5px 10px;
+        border: none;
+        border-radius: 5px;
+        background-color: #0077cc;
+        color: #fff;
+        cursor: pointer;
+      }
+      button:hover {
+        background-color: #005fa3;
+      }
+      #output {
+        margin-top: 10px;
+        display: none;
+      }
+      #output h2 {
+        margin-bottom: 5px;
+      }
+      #output p {
+        margin-top: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <form id="form">
+      <label for="numbers">Enter a set of numbers separated by commas:</label>
+      <input type="text" id="numbers" name="numbers" required>
+      <button type="submit">Sort</button>
+    </form>
+
+    <div id="output">
+      <h2>Sorted Numbers</h2>
+      <p id="sortedNumbers"></p>
+    </div>
+
+    <script>
+      const form = document.getElementById("form");
+      const output = document.getElementById("output");
+      const sortedNumbersOutput = document.getElementById("sortedNumbers");
+
+      form.addEventListener("submit", (event) => {
+        event.preventDefault();
+
+        // Get the numbers entered by the user
+        const numbers = document.getElementById("numbers").value.split(",").map(Number);
+
+        // Perform Merge Sort on the numbers
+        const sortedNumbers = mergeSort(numbers);
+
+        // Display the sorted numbers
+        sortedNumbersOutput.textContent = sortedNumbers.join(", ");
+        output.style.display = "block";
+      });
+
+      function mergeSort(arr) {
+        if (arr.length <= 1) {
+          return arr;
+        }
+
+        const mid = Math.floor(arr.length / 2);
+        const left = arr.slice(0, mid);
+        const right = arr.slice(mid);
+
+        return merge(mergeSort(left), mergeSort(right));
+      }
+
+      function merge(left, right) {
+        const result = [];
+
+        while (left.length && right.length) {
+          if (left[0] < right[0]) {
+            result.push(left.shift());
+          } else {
+            result.push(right.shift());
+          }
+        }
+
+        return result.concat(left, right);
+      }
+    </script>
+  </body>
+</html>

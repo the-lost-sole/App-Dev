@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let x=prompt("enter a number");
+        function prime(){
+            let c=0;
+            if(x==1 || x==0) {
+                document.write("It's a  composite number");
+            }
+            else{
+                for(let i=2;i<=x/2;i++){
+                    if(x%i==0) c++;
+                }
+                if(c>1) document.write("It's a composite number");
+                else document.write("It's a prime number");
+            }
+        }
+        prime();
+    </script>
+</body>
+</html>

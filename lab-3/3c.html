@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <label>enter the value of base</label>
+        <input id="base" type="text" placeholder="base"><br>
+        <label>enter the exponent value</label>
+        <input id="exp" type="text" placeholder="exponent"><br>
+        <button onclick="fun()">find power</button>
+    </form>
+    <script>
+        function fun(){
+            let base=document.getElementById("base").value;
+            let exponent=document.getElementById("exp").value;
+            var z=1;
+            for(var i=0;i<exponent;i++){
+                z=z*base;
+
+            }
+            document.write(z);
+        }
+    </script>
+
+</body>
+</html>

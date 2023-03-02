@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Text Case Converter Example</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        font-size: 16px;
+      }
+      label {
+        display: block;
+        margin-bottom: 5px;
+      }
+      input[type="text"] {
+        font-size: 16px;
+        padding: 5px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        margin-bottom: 10px;
+      }
+      button {
+        font-size: 16px;
+        padding: 5px 10px;
+        border: none;
+        border-radius: 5px;
+        background-color: #0077cc;
+        color: #fff;
+        cursor: pointer;
+      }
+      button:hover {
+        background-color: #005fa3;
+      }
+      #output {
+        margin-top: 10px;
+        display: none;
+      }
+      #output h2 {
+        margin-bottom: 5px;
+      }
+      #output p {
+        margin-top: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <form id="form">
+      <label for="text">Enter some text:</label>
+      <input type="text" id="text" name="text" required>
+      <button type="submit">Convert to Upper and Lower Case</button>
+    </form>
+
+    <div id="output">
+      <h2>Converted Text</h2>
+      <p id="upperCase"></p>
+      <p id="lowerCase"></p>
+    </div>
+
+    <script>
+      const form = document.getElementById("form");
+      const output = document.getElementById("output");
+      const upperCaseOutput = document.getElementById("upperCase");
+      const lowerCaseOutput = document.getElementById("lowerCase");
+
+      form.addEventListener("submit", (event) => {
+        event.preventDefault();
+
+        // Get the text entered by the user
+        const text = document.getElementById("text").value;
+
+        // Convert the text to upper case and lower case
+        const upperCaseText = text.toUpperCase();
+        const lowerCaseText = text.toLowerCase();
+
+        // Display the converted text
+        upperCaseOutput.textContent = "Upper Case: " + upperCaseText;
+        lowerCaseOutput.textContent = "Lower Case: " + lowerCaseText;
+        output.style.display = "block";
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>String Manipulation Example</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        font-size: 16px;
+      }
+      label {
+        display: block;
+        margin-bottom: 5px;
+      }
+      input[type="text"] {
+        font-size: 16px;
+        padding: 5px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        margin-bottom: 10px;
+      }
+      button {
+        font-size: 16px;
+        padding: 5px 10px;
+        border: none;
+        border-radius: 5px;
+        background-color: #0077cc;
+        color: #fff;
+        cursor: pointer;
+      }
+      button:hover {
+        background-color: #005fa3;
+      }
+      #output {
+        margin-top: 10px;
+        display: none;
+      }
+      #output h2 {
+        margin-bottom: 5px;
+      }
+      #output p {
+        margin-top: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <form id="form">
+      <label for="input">Enter a string:</label>
+      <input type="text" id="input" name="input" required>
+      <button type="submit">Submit</button>
+    </form>
+
+    <div id="output">
+      <h2>String Manipulation Results</h2>
+      <p id="searchResult"></p>
+      <p id="charResult"></p>
+      <p id="concatResult"></p>
+    </div>
+
+    <script>
+      const form = document.getElementById("form");
+      const output = document.getElementById("output");
+      const searchResultOutput = document.getElementById("searchResult");
+      const charResultOutput = document.getElementById("charResult");
+      const concatResultOutput = document.getElementById("concatResult");
+
+      form.addEventListener("submit", (event) => {
+        event.preventDefault();
+
+        // Get the input string
+        const input = document.getElementById("input").value;
+
+        // Search for the first occurrence of a substring in the input string
+        const searchResult = input.indexOf("substring");
+
+        // Return the character at a specified index
+        const charResult = input.charAt(5);
+
+        // Concatenate two string objects
+        const concatResult = input.concat(" and another string");
+
+        // Display the results
+        searchResultOutput.textContent = `Index of 'substring': ${searchResult}`;
+        charResultOutput.textContent = `Character at index 5: ${charResult}`;
+        concatResultOutput.textContent = `Concatenation result: ${concatResult}`;
+        output.style.display = "block";
+      });
+    </script>
+  </body>
+</html>
