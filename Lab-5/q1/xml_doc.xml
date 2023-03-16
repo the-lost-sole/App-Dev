@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bib>
+    <book year="2023">
+        <title>Book Title</title>
+        <author>
+            <last>Last Name</last>
+            <first>First Name</first>
+        </author>
+        <publisher>Publisher Name</publisher>
+        <price>Price</price>
+    </book>
+    <book year="2023">
+        <title>Book Title</title>
+        <editor>
+            <last>Last Name</last>
+            <first>First Name</first>
+            <affiliation>Affiliation</affiliation>
+        </editor>
+        <publisher>Publisher Name</publisher>
+        <price>Price</price>
+    </book>
+</bib>

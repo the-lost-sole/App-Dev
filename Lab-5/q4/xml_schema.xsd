@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="bank">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="account" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:attribute name="account-number" type="xs:string" use="required"/>
+            <xs:attribute name="branch-name" type="xs:string" use="required"/>
+            <xs:attribute name="balance" type="xs:string" use="required"/>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="customer" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:attribute name="customer-name" type="xs:string" use="required"/>
+            <xs:attribute name="customer-street" type="xs:string" use="required"/>
+            <xs:attribute name="customer-city" type="xs:string" use="required"/>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="depositor" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:attribute name="account-number" type="xs:string" use="required"/>
+            <xs:attribute name="customer-name" type="xs:string" use="required"/>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
