@@ -1,0 +1,7 @@
+To design an HTML form that consists of the following fields and a SUBMIT button (Emp Name, Emp ID, DOB, Department, Salary, Email ID) and write a generic servlet program to retrieve all the form parameter names and their corresponding values and display them in the servlet window, you can follow the steps below:
+
+Create an HTML form with the required fields and a submit button.
+Specify the method attribute of the form tag as “post” to send the form data as an HTTP POST request to the server1.
+In the servlet, use the getParameterNames() method of the HttpServletRequest object to retrieve all the parameter names of the form2.
+Use the getParameter() method of the HttpServletRequest object to retrieve the value of each parameter2.
+Display the parameter names and their corresponding values in the servlet window.

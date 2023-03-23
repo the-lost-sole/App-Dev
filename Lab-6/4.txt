@@ -1,0 +1,8 @@
+To retrieve the Employee table (Eid, Ename, Dept, Doj, Salary) from SQL database via JDBC and display the retrieved table entries in the browser window using Java Server Pages, you can follow the steps below:
+
+Create a database connection using JDBC.
+Create a JSP file and import the necessary packages.
+Create a table in the database with the required columns.
+Write a Java program to retrieve the data from the database.
+Use JSP to display the retrieved data in the browser window.
+To insert, update and delete the database entries, you can use JDBC’s executeUpdate() method

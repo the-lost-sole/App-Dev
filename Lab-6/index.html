@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Medical Records</title>
+</head>
+<body>
+	<h1>Medical Records</h1>
+	<form action="process.php" method="post">
+		<h2>Add Patient Information</h2>
+		<label>Patient ID:</label>
+		<input type="text" name="pid"><br><br>
+		<label>Patient Name:</label>
+		<input type="text" name="pname"><br><br>
+		<label>Date of Birth:</label>
+		<input type="date" name="dob"><br><br>
+		<label>Contact Number:</label>
+		<input type="tel" name="contact_no"><br><br>
+		<label>Address:</label>
+		<textarea name="address"></textarea><br><br>
+		<input type="submit" name="add_patient" value="Add Patient">
+	</form>
+
+	<form action="process.php" method="post">
+		<h2>Add Diagnosis</h2>
+		<label>Diagnosis ID:</label>
+		<input type="text" name="did"><br><br>
+		<label>Diagnosis Name:</label>
+		<input type="text" name="dname"><br><br>
+		<label>Medication:</label>
+		<input type="text" name="medication"><br><br>
+		<label>Department:</label>
+		<input type="text" name="department"><br><br>
+		<input type="submit" name="add_diagnosis" value="Add Diagnosis">
+	</form>
+
+	<form action="process.php" method="post">
+		<h2>Assign Treatment to a Patient</h2>
+		<label>Patient ID:</label>
+		<input type="text" name="pid"><br><br>
+		<label>Treatment Type:</label>
+		<input type="text" name="type"><br><br>
+		<label>Diagnosis ID:</label>
+		<input type="text" name="did"><br><br>
+		<label>Doctor Name:</label>
+		<input type="text" name="doctor_name"><br><br>
+		<input type="submit" name="assign_treatment" value="Assign Treatment">
+	</form>
+
+	<form action="process.php" method="post">
+		<h2>Update Patient Information</h2>
+		<label>Patient ID:</label>
+		<input type="text" name="pid"><br><br>
+		<label>New Patient Name:</label>
+		<input type="text" name="pname"><br><br>
+		<label>New Date of Birth:</label>
+		<input type="date" name="dob"><br><br>
+		<label>New Contact Number:</label>
+		<input type="tel" name="contact_no"><br><br>
+		<label>New Address:</label>
+		<textarea name="address"></textarea><br><br>
+		<input type="submit" name="update_patient" value="Update Patient">
+	</form>
+
+	<form action="process.php" method="post">
+		<h2>Delete Patient Information</h2>
+		<label>Patient ID:</label>
+		<input type="text" name="pid"><br><br>
+		<input type="submit" name="delete_patient" value="Delete Patient">
+	</form>
+</body>
